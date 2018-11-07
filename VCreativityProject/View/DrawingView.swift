@@ -31,6 +31,7 @@ public class DrawingView: UIView
         
         figure.move(to: CGPoint(x:200, y:220))
         
+        
         return figure
     }
 }

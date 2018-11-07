@@ -15,7 +15,7 @@ public class ArtCollectionViewController: UICollectionViewController
 
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private let itemsPerRowCompact : CGFloat = 4
-    private itemsPerRowNormal : CGFloat = 6
+    private let itemsPerRowNormal : CGFloat = 6
     
     private let creativeCS : [UIImage?] =
     {
@@ -79,23 +79,27 @@ public class ArtCollectionViewController: UICollectionViewController
     public override func numberOfSections(in collectionView: UICollectionView) -> Int
     {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return creativeCS.count
     }
 
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
+        
+        artCell.backgroundColor = .blue
+        artCell.artImage.image = creativeCS[indexPath.row]
+        artCell.artLabel.text = labels[indexPath.row]
     
         // Configure the cell
     
-        return cell
+        return artCell
     }
 
     // MARK: ƒ 
@@ -107,7 +111,10 @@ public class ArtCollectionViewController: UICollectionViewController
         let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRowCompact
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
     }
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool
