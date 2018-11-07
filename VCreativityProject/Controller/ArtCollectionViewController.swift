@@ -13,6 +13,36 @@ private let reuseIdentifier = "artIdentifier"
 public class ArtCollectionViewController: UICollectionViewController
 {
 
+    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let itemsPerRowCompact : CGFloat = 4
+    private itemsPerRowNormal : CGFloat = 6
+    
+    private let creativeCS : [UIImage?] =
+    {
+        return [
+            UIImage(named: "OctoCat"),
+            UIImage(named: "ColorCat"),
+            UIImage(named: "Bird"),
+            UIImage(named: "Phoenix"),
+            UIImage(named: "VHaikuJava"),
+            UIImage(named: "VHaikuMainframe"),
+            UIImage(named: "VHaikuSwift")
+            ]
+    }()
+    
+    private let labels : [String] =
+    {
+        return [
+            "OctoCat",
+            "ColorCat",
+            "Bird",
+            "Phoenix",
+            "VHaikuJava",
+            "VHaikuMainframe",
+            "VHaikuSwift"
+            ]
+    }()
+    
     public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
@@ -26,6 +56,7 @@ public class ArtCollectionViewController: UICollectionViewController
         // Do any additional setup after loading the view.
     }
 
+    
     public override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -67,8 +98,16 @@ public class ArtCollectionViewController: UICollectionViewController
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // MARK: ƒ 
 
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRowCompact
+    }
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool

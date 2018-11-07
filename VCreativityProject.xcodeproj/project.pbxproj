@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB6290A2219371F000984CFE /* ArtCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6290A1219371F000984CFE /* ArtCollectionViewController.swift */; };
+		DB6290A42193825800984CFE /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6290A32193825800984CFE /* ArtCell.swift */; };
 		DBAF3F432190DF4500140036 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF3F422190DF4500140036 /* AppDelegate.swift */; };
 		DBAF3F452190DF4500140036 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF3F442190DF4500140036 /* ArtViewController.swift */; };
 		DBAF3F482190DF4500140036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAF3F462190DF4500140036 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		DB6290A1219371F000984CFE /* ArtCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewController.swift; sourceTree = "<group>"; };
+		DB6290A32193825800984CFE /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		DBAF3F3F2190DF4500140036 /* VCreativityProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCreativityProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAF3F422190DF4500140036 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBAF3F442190DF4500140036 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				DBAF3F462190DF4500140036 /* Main.storyboard */,
 				DBAF3F4B2190DF4700140036 /* LaunchScreen.storyboard */,
 				DBAF3F582190DFC500140036 /* DrawingView.swift */,
+				DB6290A32193825800984CFE /* ArtCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				DBAF3F592190DFC500140036 /* DrawingView.swift in Sources */,
 				DBAF3F452190DF4500140036 /* ArtViewController.swift in Sources */,
+				DB6290A42193825800984CFE /* ArtCell.swift in Sources */,
 				DB6290A2219371F000984CFE /* ArtCollectionViewController.swift in Sources */,
 				DBAF3F432190DF4500140036 /* AppDelegate.swift in Sources */,
 			);
