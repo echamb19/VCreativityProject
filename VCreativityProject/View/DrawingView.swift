@@ -15,7 +15,7 @@ public class DrawingView: UIView
         createFigure().stroke()
         
     }
-    
+    // V This makes a circle. V
     private func createFigure() ->UIBezierPath
     {
         let figure : UIBezierPath = UIBezierPath()
