@@ -12,11 +12,11 @@ public class DrawingView: UIView
 {
     public override func draw(_ rect: CGRect) -> Void
     {
-        createFigure().stroke()
+        createPicture().stroke()
         
     }
     // V This makes a circle. V
-    private func createFigure() -> UIBezierPath
+    private func createPicture() -> UIBezierPath
     {
         let figure : UIBezierPath = UIBezierPath()
         
@@ -30,7 +30,13 @@ public class DrawingView: UIView
                       clockwise: true)
         
         figure.move(to: CGPoint(x:200, y:220))
-        
+        figure.addLine(to: CGPoint(x: 200, y: 270))
+        figure.move(to: CGPoint(x: 180, y:240))
+        figure.addLine(to: CGPoint(x:220, y:240))
+        figure.move(to: CGPoint(x: 200, y:270))
+        figure.addLine(to: CGPoint(x: 180, y:300))
+        figure.move(to: CGPoint(x: 200, y: 270))
+        figure.addLine(to: CGPoint(x: 220, y: 300))
         
         return figure
     }

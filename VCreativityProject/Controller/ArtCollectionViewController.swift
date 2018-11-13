@@ -51,17 +51,17 @@ public class ArtCollectionViewController: UICollectionViewController
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
 
     
-    public override func didReceiveMemoryWarning()
+    /*public override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    }*/
 
     /*
     // MARK: - Navigation
@@ -115,6 +115,18 @@ public class ArtCollectionViewController: UICollectionViewController
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
     
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionviewLayout: UICollectionViewLayout,
+                               insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+
+}
+    
+    
+    
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool
@@ -149,4 +161,4 @@ public class ArtCollectionViewController: UICollectionViewController
      }
     */
 
-}
+
